@@ -1,3 +1,5 @@
 <ul>
-    <li *ngFor="let name of names">{{name}} was one of the greatest ancient Greek Philosophers</li>
+    <li *ngFor="let org_name of names">
+        <app-user-user [name]="org_name"></app-user-user>
+    </li>
 </ul>
