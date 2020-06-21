@@ -1,29 +1,29 @@
 <h1>
   <p>{{title}}.</p>
-
+  
   <input type="text" [(ngModel)]="title">
-
-  <app-hello-world></app-hello-world>
-
   <app-user-user></app-user-user>
-
+  
   <app-user-list></app-user-list>
-
+  
+  <app-hello-world></app-hello-world>
+  
   <form class="ui large form segment">
     <h3 class="ui header">Add a Link</h3>
-
+    
     <div class="field">
       <label for="title">Title:</label>
-      <input name="title" id="title" #newtitle>
+      <input name="title" id="title" #newtitle> <!-- variable -->
     </div>
     <div class="field">
       <label for="link">Link:</label>
-      <input name="link" id="link"#newlink>
+      <input name="link" id="link" #newlink> <!-- variable -->
     </div>
-    <button (click)="addArticle(newtitle, newlink)"
-            class="ui positive right floated button">
-      Submit Link
-    </button>
-  </form>
-  
+    <button (click)="addArticle(newtitle, newlink, $event)" 
+    class="ui positive right floated button"
+    [disabled]="allowButton">
+    Submit Link
+  </button>
+</form>
+
 </h1>

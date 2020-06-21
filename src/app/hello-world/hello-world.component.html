@@ -1,1 +1,3 @@
-<p>hello-world works!</p>
+<p>This is a practise template where I use two way data binding: {{my_input}}</p>
+<input type="text" [(ngModel)]="my_input" (input)="on_input_funct()">
+<button [disabled]=is_disabled (click)="on_click_reset()">Click if not empty</button>
