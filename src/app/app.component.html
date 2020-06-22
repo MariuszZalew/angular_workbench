@@ -19,11 +19,15 @@
       <label for="link">Link:</label>
       <input name="link" id="link" #newlink> <!-- variable -->
     </div>
-    <button (click)="addArticle(newtitle, newlink, $event)" 
+
+    <button (click)="addArticle(newtitle, newlink)" 
     class="ui positive right floated button"
     [disabled]="allowButton">
     Submit Link
   </button>
+
 </form>
+<app-article></app-article>
+
 
 </h1>

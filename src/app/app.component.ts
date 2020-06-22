@@ -15,7 +15,7 @@ export class AppComponent {
 
     setTimeout(() => {
       this.allowButton = !this.allowButton;
-    }, 450);
+    }, 800);
     return false;
   }
 }
