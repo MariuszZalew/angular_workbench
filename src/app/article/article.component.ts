@@ -11,17 +11,19 @@ export class ArticleComponent implements OnInit {
   title: string;
   link: string;
 
+  voteUp() {
+    this.votes += 1;
+    return false;
+  }
+  voteDown() {
+    this.votes -= 1;
+    return false;
+  }
 
   constructor() { 
     this.title = 'Angular';
     this.link = 'http://angular.io';
     this.votes = 10;
-  }
-  voteUp() {
-    this.votes += 1;
-  }
-  voteDown() {
-    this.votes -= 1;
   }
 
   ngOnInit(): void {
