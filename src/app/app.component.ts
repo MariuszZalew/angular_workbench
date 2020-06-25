@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from "./article/article.model";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-hello';
   allowButton = false;
+
+  articles: Article[];
+
+  constructor() {
+    this.articles = [
+      new Article('Angular','http://angular.io',13),
+      new Article('AngularHome','http://angular.io',10),
+      new Article('My GH','http://angular.io',9)
+    ]
+  }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
     console.log(`Adding article title: ${title.value} and link: ${link.value}`);

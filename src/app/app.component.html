@@ -27,8 +27,9 @@
     Submit Link
   </button>
 </form>
-<app-article></app-article>
-<app-article></app-article>
-
+<app-article 
+  *ngFor="let article of articles"
+  [article]="article">
+</app-article>
 
 </h1>
