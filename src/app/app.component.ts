@@ -3,19 +3,24 @@ import { Article } from "./article/article.model";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  templateUrl: './app.Component.html',
+  styleUrls: ['./app.Component.css'],
 })
 export class AppComponent {
-  title = 'angular-hello';
+  title = 'angular-hi';
   allowButton = false;
 
   articles: Article[];
 
+  
+  sortedArticles(): Article[] {
+    return this.articles.sort((a: Article, b:Article) => b.votes - a.votes);
+  }
+
   constructor() {
     this.articles = [
       new Article('Angular','http://angular.io',13),
-      new Article('AngularHome','http://angular.io',10),
+      new Article('React','http://angular.io',10),
       new Article('My GH','https://github.com/MariuszZalew',9)
     ]
   }
