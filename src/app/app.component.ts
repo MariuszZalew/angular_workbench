@@ -7,7 +7,7 @@ import { Article } from "./article/article.model";
   styleUrls: ['./app.Component.css'],
 })
 export class AppComponent {
-  title = 'angular-hi';
+  title = "Angular Hello"
   allowButton = false;
 
   articles: Article[];

@@ -1,12 +1,4 @@
 <h1>
-  <p>{{title}}.</p>
-  
-  <input type="text" [(ngModel)]="title">
-
-  <app-user-user></app-user-user>
-  
-  <app-user-list></app-user-list>
-  
   <app-hello-world></app-hello-world>
   
   <form class="ui large form segment">
@@ -14,7 +6,7 @@
     
     <div class="field">
       <label for="title">Title:</label>
-      <input name="title" id="title" #newtitle> <!-- variable -->
+      <input name="title" id="title" #newtitle title=""> <!-- variable -->
     </div>
     <div class="field">
       <label for="link">Link:</label>
@@ -24,7 +16,7 @@
     <button (click)="addArticle(newtitle, newlink)" 
     class="ui positive right floated button"
     [disabled]="allowButton">
-    Submit Link
+    Submit this
   </button>
 </form>
 <app-article 
