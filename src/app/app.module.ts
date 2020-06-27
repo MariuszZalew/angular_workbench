@@ -5,12 +5,14 @@ import { FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { ArticleComponent } from './article/article.component';
+import { ExerciseOneComponent } from './exercise-one/exercise-one.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     ArticleComponent,
+    ExerciseOneComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,4 +21,5 @@ import { ArticleComponent } from './article/article.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

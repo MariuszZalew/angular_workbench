@@ -9,9 +9,10 @@ export class HelloWorldComponent implements OnInit {
   my_input: string;
   is_disabled: boolean = true;
 
-  on_input_funct() {
+  on_input_funct( e: any ) {
     if (this.my_input) {
       this.is_disabled = false;
+      console.log(e)
     } else {
       this.is_disabled = true;
     }
