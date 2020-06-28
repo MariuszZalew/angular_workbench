@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExerciseOneComponent implements OnInit {
 
+  display: boolean = true;
   am_i_disabled: boolean = false;
   title_atribute: string = "I'm just a tooltip message";
   some_random_text: string = "Some random text for testing";
