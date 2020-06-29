@@ -26,6 +26,52 @@ class Person {
     
 }
 
+class Animal {
+  name: string;
+  
+  constructor(theName: string) {
+    this.name = theName;
+  }
+
+  move(distanceInMeters: number = 0) {
+    console.log(`${this.name} moved ${distanceInMeters}m.`);
+  }
+}
+
+class Snake extends Animal {
+  length: number;
+  poisonous: boolean;
+
+  constructor(name: string, length: number, poisonous: boolean) {
+    super(name);
+    this.length = length;
+    this.poisonous = poisonous;
+  }
+
+  move(distanceInMeters = 5) {
+    console.log('Slithering...');
+    super.move(distanceInMeters);
+  }
+}
+
+class Horse extends Animal {
+  constructor(name: string) {
+    super(name);
+  }
+
+  move(distanceInMeters = 55) {
+    console.log('Galloping...');
+    super.move(distanceInMeters);
+  }
+}
+
+
+let sam = new Snake('Sammy the Python', 10, false);
+let tom: Animal = new Horse('Tommy the Palomino');
+
+sam.move();
+tom.move(34);
+
 var osoba: Person = new Person('Mariusz', 'Zalewski', 66);
 console.log(osoba, osoba.greet());
 

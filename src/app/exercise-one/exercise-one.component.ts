@@ -20,7 +20,10 @@ export class ExerciseOneComponent implements OnInit {
     }, 500);
   }
 
-  constructor() { }
+  constructor() {
+    this.display = Math.random() > .5 ? true : false;
+    console.log("this is loged in constructor", this.display);
+  }
 
   ngOnInit(): void {
   }
