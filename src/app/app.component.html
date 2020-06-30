@@ -1,3 +1,4 @@
+
 <h1>
   <app-hello-world></app-hello-world>
   
@@ -6,22 +7,23 @@
     
     <div class="field">
       <label for="title">Title:</label>
-      <input name="title" id="title" #newtitle title=""> <!-- variable -->
+      <input name="title" id="title" #newtitle title="" />
     </div>
     <div class="field">
       <label for="link">Link:</label>
-      <input name="link" id="link" #newlink> <!-- variable -->
+      <input name="link" id="link" #newlink />
     </div>
-
-    <button (click)="addArticle(newtitle, newlink)" 
+    
+    <button
+    (click)="addArticle(newtitle, newlink)"
     class="ui positive right floated button"
-    [disabled]="allowButton">
+    [disabled]="allowButton"
+    >
     Submit this
   </button>
 </form>
-<app-article 
-  *ngFor="let article of sortedArticles()"
-  [article]="article">
+<app-article *ngFor="let article of sortedArticles()" [article]="article">
 </app-article>
 <app-exercise-one></app-exercise-one>
 </h1>
+<app-products-all></app-products-all>

@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+
+/**
+ * the top-level component for our application
+ */
+
+
 import { Article } from "./article/article.model";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.Component.html',
-  styleUrls: ['./app.Component.css'],
 })
+
 export class AppComponent {
   title = "Angular Hello"
   allowButton = false;
