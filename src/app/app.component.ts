@@ -27,7 +27,7 @@ export class AppComponent {
     this.articles = [
       new Article('Angular','http://angular.io',13),
       new Article('React','http://angular.io',10),
-      new Article('My GH','https://github.com/MariuszZalew',9)
+      new Article('My GitHub','https://github.com/MariuszZalew',9)
     ]
   }
 

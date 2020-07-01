@@ -4,7 +4,7 @@ import {
   Input,
   Output
 } from '@angular/core';
-import { Product } from '../products-all/product.model';
+import { Product } from '../product.model';
 
 /**
  * @ProductsList: A component for rendering all ProductRows and

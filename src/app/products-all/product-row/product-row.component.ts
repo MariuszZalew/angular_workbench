@@ -3,7 +3,7 @@ import {
   Input,
   HostBinding
 } from '@angular/core';
-import { Product } from '../products-all/product.model';
+import { Product } from '../product.model';
 
 /**
  * @ProductRow: A component for the view of single Product

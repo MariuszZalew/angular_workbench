@@ -2,7 +2,7 @@ import {
   Component,
   Input
 } from '@angular/core';
-import { Product } from '../products-all/product.model';
+import { Product } from '../product.model';
 
 /**
  * @ProductDepartment: A component to show the breadcrumbs to a

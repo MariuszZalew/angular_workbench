@@ -3,7 +3,7 @@ import {
   Input,
   HostBinding
 } from '@angular/core';
-import { Product } from '../products-all/product.model';
+import { Product } from '../product.model';
 
 /**
  * @ProductImage: A component to show a single Product's image
