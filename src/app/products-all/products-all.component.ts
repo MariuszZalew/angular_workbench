@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Product } from "./product.model";
 
 // MyInventoryApp
@@ -8,7 +8,7 @@ import { Product } from "./product.model";
   templateUrl: './products-all.component.html',
 })
 
-export class ProductsAllComponent implements OnInit {
+export class ProductsAllComponent {
   products: Product[];
 
   constructor() { 
@@ -37,10 +37,6 @@ export class ProductsAllComponent implements OnInit {
   productWasSelected(product: Product): void {
     console.log('Product clicked: ', product);
   }
-
-  ngOnInit(): void {
-  }
-
 }
 
 

@@ -24,7 +24,7 @@ import { ExerciseOneComponent } from "./exercise-one/exercise-one.component";
     ProductsAllComponent,
     HelloWorldComponent,
     ArticleComponent,
-    ExerciseOneComponent
+    ExerciseOneComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

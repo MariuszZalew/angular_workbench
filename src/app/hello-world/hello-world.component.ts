@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
   templateUrl: './hello-world.component.html',
 })
-export class HelloWorldComponent implements OnInit {
+export class HelloWorldComponent {
   my_input: string;
   is_disabled: boolean = true;
 
@@ -21,8 +21,5 @@ export class HelloWorldComponent implements OnInit {
     this.is_disabled = true;
   }
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
