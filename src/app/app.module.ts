@@ -12,6 +12,7 @@ import { ProductsAllComponent } from "./products-all/products-all.component";
 import { HelloWorldComponent } from "./hello-world/hello-world.component";
 import { ArticleComponent } from "./article/article.component";
 import { ExerciseOneComponent } from "./exercise-one/exercise-one.component";
+import { ExerciseTwoComponent } from "./exercise-two/exercise-two.component";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ExerciseOneComponent } from "./exercise-one/exercise-one.component";
     HelloWorldComponent,
     ArticleComponent,
     ExerciseOneComponent,
+    ExerciseTwoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
