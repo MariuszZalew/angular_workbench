@@ -3,16 +3,13 @@ import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
-  templateUrl: './article.component.html',
+  templateUrl: './article.component.html'
 })
+
 export class ArticleComponent {
   @HostBinding('attr.class') cssClass = 'row';
-  @Input() article: Article;
+  @Input('foo') article: Article;
   
-  constructor() { 
-
-  }
-
   voteUp(): void {
     this.article.voteUp();
   }

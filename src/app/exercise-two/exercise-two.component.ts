@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Person } from "./exercise-two.model";
 
 @Component({
@@ -10,9 +10,8 @@ import { Person } from "./exercise-two.model";
 export class ExerciseTwoComponent {
   private manual: string = 'Harry Potter';
   public value: number = 1;
-  public people: Person[] = [
-      new Person("me","ju",99)
-  ];
+
+  @Input('GoodName') person: Person[];
 
   public get myBook(): string {
     return this.manual;

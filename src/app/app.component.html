@@ -1,4 +1,4 @@
-<app-exercise-two></app-exercise-two>
+<app-exercise-two [GoodName]="ownComponentPerson"></app-exercise-two>
 <h1>
   <app-hello-world></app-hello-world>
   
@@ -22,7 +22,7 @@
     Submit this
   </button>
 </form>
-<app-article *ngFor="let article of sortedArticles()" [article]="article">
+<app-article *ngFor="let article of sortedArticles()" [foo]="article">
 </app-article>
 <app-exercise-one></app-exercise-one>
 </h1>

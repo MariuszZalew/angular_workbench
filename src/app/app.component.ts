@@ -15,9 +15,9 @@ import { Article } from "./article/article.model";
 export class AppComponent {
   title = "Angular Hello"
   allowButton = false;
-
   articles: Article[];
 
+  ownComponentPerson: string[] = ["Jan","Krzysztof","Alicja"];
   
   sortedArticles(): Article[] {
     return this.articles.sort((a: Article, b:Article) => b.votes - a.votes);
