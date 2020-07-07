@@ -11,7 +11,7 @@ export class ExerciseTwoComponent {
   private manual: string = 'Harry Potter';
   public value: number = 1;
 
-  @Input('GoodName') person: Person[];
+  @Input('GoodName') personArray: Person[];
   @Output() passPerson: EventEmitter<Person>;
 
   constructor() {
