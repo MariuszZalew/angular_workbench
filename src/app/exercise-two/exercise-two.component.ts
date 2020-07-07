@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Person } from "./exercise-two.model";
 
 @Component({
@@ -12,9 +12,18 @@ export class ExerciseTwoComponent {
   public value: number = 1;
 
   @Input('GoodName') person: Person[];
+  @Output() passPerson: EventEmitter<Person>;
+
+  constructor() {
+    this.passPerson = new EventEmitter();
+  }
 
   public get myBook(): string {
     return this.manual;
+  }
+
+  passToCustomEvent(name: Person) {
+    this.passPerson.emit(name);
   }
 
   goodBook() {

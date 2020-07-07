@@ -65,7 +65,6 @@ class Horse extends Animal {
   }
 }
 
-
 let sam = new Snake('Sammy the Python', 10, false);
 let tom: Animal = new Horse('Tommy the Palomino');
 
@@ -76,7 +75,16 @@ var osoba: Person = new Person('Mariusz', 'Zalewski', 66);
 console.log(osoba, osoba.greet());
 
 function greetText(name:string): string {
-    return `Hello ${name}`;
+  return `Hello ${name}`;
 }
 
 console.log(greetText(fullName));
+
+let textForTest = "Miamoto Musashi was a legendary swordsman";
+let regular = new RegExp('Miamoto');
+let regular2 = /Musashi/;
+let regular3 = /foo/;
+
+console.log(regular.exec(textForTest), regular2, regular3.test(textForTest),textForTest.match(regular2),textForTest.search(regular2));
+
+//finished at 2.3 7.00min

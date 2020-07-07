@@ -10,4 +10,4 @@
 <p>Value: {{ value }}</p>
 
 <ul>
-    <li *ngFor="let e of person">name: {{e}}</li>
+    <li (click)="passToCustomEvent(e)" *ngFor="let e of person">name: {{e}}</li>

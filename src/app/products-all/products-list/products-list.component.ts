@@ -10,7 +10,9 @@ import { Product } from '../product.model';
   selector: 'products-list',
   templateUrl: './products-list.component.html'
 })
+
 export class ProductsListComponent {
+
   @Input('cave-man') productList: Product[];
 
   @Output() onProductSelected: EventEmitter<Product>;
@@ -20,7 +22,7 @@ export class ProductsListComponent {
   constructor() {
     this.onProductSelected = new EventEmitter();
   }
-
+  
   clicked(product: Product): void {
     this.currentProduct = product;
     this.onProductSelected.emit(product);

@@ -22,7 +22,9 @@ export class AppComponent {
   sortedArticles(): Article[] {
     return this.articles.sort((a: Article, b:Article) => b.votes - a.votes);
   }
-
+  logPerson(defaultEvent) {
+    console.log(`You have clicked ${defaultEvent}`);
+  }
   constructor() {
     this.articles = [
       new Article('Angular','http://angular.io',13),
