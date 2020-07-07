@@ -22,9 +22,6 @@ export class AppComponent {
   sortedArticles(): Article[] {
     return this.articles.sort((a: Article, b:Article) => b.votes - a.votes);
   }
-  logPerson(defaultEvent) {
-    console.log(`You have clicked ${defaultEvent}`);
-  }
   constructor() {
     this.articles = [
       new Article('Angular','http://angular.io',13),
@@ -32,7 +29,7 @@ export class AppComponent {
       new Article('My GitHub','https://github.com/MariuszZalew',9)
     ]
   }
-
+  
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
     console.log(`Adding article title ${title.value} and link ${link.value}`);
     this.articles.push(new Article(title.value, link.value, 0));
@@ -41,4 +38,7 @@ export class AppComponent {
     return false;
   }
   
+  logPerson(defaultEvent) {
+    console.log("You have clicked ",defaultEvent);
+  }
 }
