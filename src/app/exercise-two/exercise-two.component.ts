@@ -13,6 +13,7 @@ export class ExerciseTwoComponent {
 
   @Input('GoodName') personArray: Person[];
   @Output() passPerson: EventEmitter<Person>;
+  @Output() passName: EventEmitter<string>;
 
   constructor() {
     this.passPerson = new EventEmitter();
@@ -28,6 +29,11 @@ export class ExerciseTwoComponent {
 
   goodBook() {
     return 'Game of Thrones';
+  }
+
+  addName() {
+    console.log('name added');
+    
   }
 
   incrementByOne() {
