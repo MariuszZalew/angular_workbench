@@ -1,5 +1,5 @@
-import { Component, HostBinding, Input } from '@angular/core';
-import { Article } from './article.model';
+import { Component, Input } from '@angular/core';
+import { Article } from '../article.model';
 
 @Component({
   selector: 'app-article',
@@ -7,7 +7,6 @@ import { Article } from './article.model';
 })
 
 export class ArticleComponent {
-  @HostBinding('attr.class') cssClass = 'row';
   @Input('foo') article: Article;
   
   voteUp(): void {

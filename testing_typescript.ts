@@ -1,3 +1,6 @@
+import { resolve } from "dns";
+import { rejects } from 'assert';
+
 var fullName: string = "Mariusz Zalewski";
 
 var jobs: Array<string> = ['IBM', 'Microsoft','Google'];
@@ -88,3 +91,103 @@ let regular3 = /foo/;
 console.log(regular.exec(textForTest), regular2, regular3.test(textForTest),textForTest.match(regular2),textForTest.search(regular2));
 
 //finished at 2.3 7.00min
+const jsonFile = '{ "command":"get",  "result":"ok",  "what":"loc" }';
+console.log(JSON.parse(jsonFile));
+
+const promise = new Promise(function (resolve, reject) {
+  //here I do stuff.. async stuff
+  if (/* everything works just fine */ false) {
+    resolve('Stuff worked!');
+  } else {
+    reject( new Error("lol it doesn't work"));
+  }
+});
+
+promise.then(
+  function (result) {
+    console.log(result); //stuff worked
+  }).catch(
+    function () {
+      console.log("nope"); //nope not today bro
+    }
+  );
+
+// function get(url) {
+//   return new Promise(function(resolve, reject) {
+//     $.get(url,function(data) {
+//       resolve(data);
+//     })
+//     .fail(function() {
+//       reject();
+//     });
+//   });
+// }
+
+function get2(url) {
+  return new Promise(function (resolve, reject) {
+    fetch(url)
+      .then((data) => {
+        //Handle success
+        resolve(data);
+      })
+      .catch((error) => {
+        //handle error
+        reject(error);
+      });
+  });
+};
+
+function get3(url) {
+  fetch(url)
+    .then((data) => data.json())
+    .catch((err) => err);
+}
+
+let myController = { users: null };
+
+get2('users.all')
+  .then((users) => {
+    myController.users = users;
+  })
+  .catch(() => {
+    delete myController.users;
+  });
+
+
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 200);
+});
+
+const promise2 = new Promise( (resolve, rejects) => {
+  if (2 < 1) {
+  resolve('fuck this, I\'m good');
+  } else {
+    rejects('no fucking today bro..');
+  }
+});
+console.log(promise2.catch());
+
+const promise3 = new Promise( (resolve, rejects) => { 
+  wynik: Number;
+  setTimeout(() => 0/2, 300)
+ });
+
+console.log(promise3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

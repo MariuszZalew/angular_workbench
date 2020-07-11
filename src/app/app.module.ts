@@ -10,9 +10,10 @@ import { ProductRowComponent } from "./products-all/product-row/product-row.comp
 import { ProductsListComponent } from "./products-all/products-list/products-list.component";
 import { ProductsAllComponent } from "./products-all/products-all.component";
 import { HelloWorldComponent } from "./hello-world/hello-world.component";
-import { ArticleComponent } from "./article/article.component";
 import { ExerciseOneComponent } from "./exercise-one/exercise-one.component";
 import { ExerciseTwoComponent } from "./exercise-two/exercise-two.component";
+import { VoteDomainComponent } from './vote-domain/vote-domain.component';
+import { ArticleComponent } from './vote-domain/article/article.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { ExerciseTwoComponent } from "./exercise-two/exercise-two.component";
     ProductsListComponent,
     ProductsAllComponent,
     HelloWorldComponent,
-    ArticleComponent,
     ExerciseOneComponent,
     ExerciseTwoComponent,
+    VoteDomainComponent,
+    ArticleComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

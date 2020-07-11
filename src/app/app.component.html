@@ -2,31 +2,11 @@
   [GoodName]="ownComponentPerson"
   (passPerson)="logPerson($event)"
 ></app-exercise-two>
-<h1>
-  <app-hello-world></app-hello-world>
 
-  <form class="ui large form segment">
-    <h3 class="ui header">Add a Link</h3>
+<app-hello-world></app-hello-world>
 
-    <div class="field">
-      <label for="title">Title:</label>
-      <input name="title" id="title" #newtitle />
-    </div>
-    <div class="field">
-      <label for="link">Label:</label>
-      <input name="link" id="link" #newlink />
-    </div>
-    <button
-      (click)="addArticle(newtitle, newlink)"
-      class="ui positive right floated button"
-      [disabled]="allowButton"
-    >
-      Submit this
-    </button>
-  </form>
-  <app-article *ngFor="let article of sortedArticles()" [foo]="article">
-  </app-article>
-  <app-exercise-one></app-exercise-one>
-</h1>
+<app-vote-domain></app-vote-domain>
+  
+<app-exercise-one></app-exercise-one>
 
 <app-products-all></app-products-all>
