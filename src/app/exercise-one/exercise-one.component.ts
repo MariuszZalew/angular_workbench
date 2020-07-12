@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './exercise-one.component.html',
 })
 export class ExerciseOneComponent implements OnInit {
-
+  disabled: boolean;
   display: boolean = true;
   am_i_disabled: boolean = false;
   title_atribute: string = "I'm just a tooltip message";

@@ -1,12 +1,15 @@
+<app-nav-menu></app-nav-menu>
+
+<app-exercise-one *ngIf="true"></app-exercise-one>
+
 <app-exercise-two
   [GoodName]="ownComponentPerson"
   (passPerson)="logPerson($event)"
+  *ngIf="true"
 ></app-exercise-two>
 
-<app-hello-world></app-hello-world>
+<app-hello-world *ngIf="true"></app-hello-world>
 
-<app-vote-domain></app-vote-domain>
-  
-<app-exercise-one></app-exercise-one>
+<app-vote-domain *ngIf="true"></app-vote-domain>
 
-<app-products-all></app-products-all>
+<app-products-all *ngIf="true"></app-products-all>

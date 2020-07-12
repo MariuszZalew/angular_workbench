@@ -14,6 +14,7 @@ import { ExerciseOneComponent } from "./exercise-one/exercise-one.component";
 import { ExerciseTwoComponent } from "./exercise-two/exercise-two.component";
 import { VoteDomainComponent } from './vote-domain/vote-domain.component';
 import { ArticleComponent } from './vote-domain/article/article.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ArticleComponent } from './vote-domain/article/article.component';
     ExerciseTwoComponent,
     VoteDomainComponent,
     ArticleComponent,
+    NavMenuComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
