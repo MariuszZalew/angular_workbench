@@ -1,17 +1,39 @@
 <div class="ui secondary  menu" id="nab">
-  <a class="item">
+
+<!-- <ul [ngSwitch]="'ex-1'">
+  <li class="item" *ngSwitchCase="'ex-1'">Exercise One</li>
+  <li class="item" *ngSwitchCase="'ex-2'">Exercise Two</li>
+  <li class="item" *ngSwitchCase="'start'">Starting</li>
+  <li class="item" *ngSwitchCase="'vote'">Voting App</li>
+  <li class="item" *ngSwitchCase="'prod'">View Products</li>
+</ul> -->
+
+  <a [ngStyle]="{color:'white', 'background-color':'purple'}" 
+     class="item" 
+     [routerLink]="'Exercise1'">
     Exercise One
   </a>
-  <a class="item">
+  <a [style.background-color]="'red'" 
+     class="item" 
+     [routerLink]="'Exercise2'">
     Exercise Two
   </a>
-  <a class="item">
+  <a [ngClass]="['item']" 
+     [routerLink]="'Hello'">
     Starting
   </a>
-  <a class="item">
+  <a [ngClass]="'item'" 
+     [routerLink]="[ '/Vote' ]">
     Voting App
   </a>
-  <a class="item">
+  <a class="item" 
+     [routerLink]="'Products'"
+     routerLinkActive="myClassForActiveComponent"
+     [routerLinkActiveOptions]="{exact: true}"
+     *ngIf="true;else something">
     View Products
   </a>
+
+  <ng-template #something> Yes sir, I'm doing gr8</ng-template>
+
 </div>
