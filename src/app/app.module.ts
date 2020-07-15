@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -16,13 +16,15 @@ import { ExerciseTwoComponent } from './exercise-two/exercise-two.component';
 import { VoteDomainComponent } from './vote-domain/vote-domain.component';
 import { ArticleComponent } from './vote-domain/article/article.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { TestFormComponent } from './test-form/test-form.component';
 
 const appRoutes: Routes = [
   { path: 'Exercise1', component: ExerciseOneComponent },
   { path: 'Exercise2', component: ExerciseTwoComponent },
   { path: 'Hello', component: HelloWorldComponent },
   { path: 'Vote', component: VoteDomainComponent },
-  { path: 'Products', component: ProductsAllComponent }
+  { path: 'Products', component: ProductsAllComponent },
+  { path: 'TestForm', component: TestFormComponent }
 ];
 
 @NgModule({
@@ -40,9 +42,11 @@ const appRoutes: Routes = [
     VoteDomainComponent,
     ArticleComponent,
     NavMenuComponent,
+    TestFormComponent,
   ],
   imports: [BrowserModule,
             FormsModule, 
+            ReactiveFormsModule,
             RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
