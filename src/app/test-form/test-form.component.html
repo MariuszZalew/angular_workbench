@@ -1,23 +1,23 @@
 <div class="ui raised segment">
   <h2 class="ui header">Demo Form</h2>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+  <form  class="ui form" (ngSubmit)="onSubmitOne(foo)" #foo="ngForm">
     <div class="field">
       <label for="anyInput">Any</label>
-      <input type="text" id="anyInput" placeholder="ANY" name="any" ngModel />
+      <input type="text" id="anyInput" placeholder="ANY" name="aNy" ngModel />
     </div>
     <button type="submit" class="ui button">Submit</button>
   </form>
 </div>
 
 <div class="ui raised segment">
-  <form class="ui form">
+  <form class="ui form" (ngSubmit)="onSubmitTwo()" #bar="ngForm">
     <div class="field">
       <label>First Name</label>
-      <input type="text" name="first-name" placeholder="First Name" />
+      <input type="text" name="first-name" placeholder="First Name" ngModel/>
     </div>
     <div class="field">
       <label>Last Name</label>
-      <input type="text" name="last-name" placeholder="Last Name" />
+      <input type="text" name="last-name" placeholder="Last Name" ngModel/>
     </div>
     <div class="field">
       <div class="ui checkbox">

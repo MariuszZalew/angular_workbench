@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-test-form',
@@ -7,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestFormComponent implements OnInit {
 
+  @ViewChild('bar') singUp: NgForm; 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(e: any) {
-    console.log(e);
+  onSubmitOne(form: NgForm) {
+    console.log(form, form.value);
+  }
+
+  onSubmitTwo() {
+    console.log(this.singUp.value);
   }
 
 }
