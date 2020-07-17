@@ -52,24 +52,23 @@
 
 
 <div class="ui raised segment">
-  <h2 class="ui header">Train One</h2>
-<form class="ui form">
-  <div class="field">
-    <label>First Name</label>
-    <input type="text" name="first-name" placeholder="First Name">
-  </div>
-  <div class="field">
-    <label>Last Name</label>
-    <input type="text" name="last-name" placeholder="Last Name">
-  </div>
-  <div class="field">
-    <div class="ui checkbox">
-      <input type="checkbox" tabindex="0" class="">
-      <label>I agree to the Terms and Conditions</label>
+  <h2 class="ui header">String Reverse</h2>
+
+  <form class="ui form" #reverseStr="ngForm" 
+        (ngSubmit)="onSubmitReverseStr(reverseStr)">
+
+    <div class="field">
+      <label>Please, type some text</label>
+      <input type="text" name="revStr" placeholder="First Name" [(ngModel)]="this.testString" required valid>
     </div>
-  </div>
-  <button class="ui button" type="submit">Submit</button>
-</form>
+    <p>{{reverseStr.value | json }}</p>
+    <p>{{reverseStr.valid | json }}</p>
+
+    <p> {{ this.testString|| 'input field is empty' }} </p>
+    <p *ngIf="hasBeenEvaluated">Reversed String: {{ this.reverseResultView }}</p>
+
+    <button class="ui button" type="submit" [disabled]="!reverseStr.valid">Submit string</button>
+  </form>
 </div>
 
 <div class="ui raised segment">
