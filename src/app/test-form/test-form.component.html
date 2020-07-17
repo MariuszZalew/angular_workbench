@@ -20,6 +20,7 @@
 </div>
 
 <div class="ui raised segment">
+  <h2 class="ui header">ngGroup</h2>
   <form class="ui form" (ngSubmit)="onSubmitTwo()" #bar="ngForm">
     <div ngModelGroup="secondForm" #secondForm="ngModelGroup">
       <div class="field">
@@ -34,11 +35,11 @@
       </div>
       <div class="field">
         <label>Last Name</label>
-        <input type="text" name="last-name" placeholder="Last Name" ngModel />
+        <input type="text" name="last-name" placeholder="Last Name" ngModel required/>
       </div>
       <div class="field">
         <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden" />
+          <input type="checkbox" name="checkGroup" ngModel required/>
           <label>I agree to the Terms and Conditions</label>
         </div>
       </div>
@@ -49,46 +50,87 @@
   </form>
 </div>
 
-<div class="ui inverted segment">
-  <div class="ui inverted form">
-    <div class="two fields">
-      <div class="field">
-        <label>First Name</label>
-        <input placeholder="First Name" type="text" />
-      </div>
-      <div class="field">
-        <label>Last Name</label>
-        <input placeholder="Last Name" type="text" />
-      </div>
-    </div>
-    <div class="inline field">
-      <div class="ui checkbox">
-        <input type="checkbox" tabindex="0" class="hidden" />
-        <label>I agree to the terms and conditions</label>
-      </div>
-    </div>
-    <div class="ui submit button">Submit</div>
+
+<div class="ui raised segment">
+  <h2 class="ui header">Train One</h2>
+<form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
   </div>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="">
+      <label>I agree to the Terms and Conditions</label>
+    </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
 </div>
 
-<div class="ui form">
-  <div class="inline field">
+<div class="ui raised segment">
+  <h2 class="ui header">Train Two</h2>
+<form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
     <div class="ui checkbox">
-      <input type="checkbox" tabindex="0" class="hidden" />
-      <label>Checkbox</label>
+      <input type="checkbox" tabindex="0" class="">
+      <label>I agree to the Terms and Conditions</label>
     </div>
   </div>
-  <div class="inline field">
-    <div class="ui slider checkbox">
-      <input type="checkbox" tabindex="0" class="hidden" />
-      <label>Slider</label>
-    </div>
-    <label></label>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+</div>
+
+<div class="ui raised segment">
+  <h2 class="ui header">Train Three</h2>
+<form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
   </div>
-  <div class="inline field">
-    <div class="ui toggle checkbox">
-      <input type="checkbox" tabindex="0" class="hidden" />
-      <label>Toggle</label>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="">
+      <label>I agree to the Terms and Conditions</label>
     </div>
   </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+</div>
+
+<div class="ui raised segment">
+  <h2 class="ui header">Train Four</h2>
+<form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="">
+      <label>I agree to the Terms and Conditions</label>
+    </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
 </div>
