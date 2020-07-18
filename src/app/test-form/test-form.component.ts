@@ -4,24 +4,22 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-test-form',
   templateUrl: './test-form.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class TestFormComponent implements OnInit {
-
-  @ViewChild('bar') singUp: NgForm; 
+  @ViewChild('bar') singUp: NgForm;
 
   testString: string = 'Please, input any string';
   hasBeenEvaluated: boolean = false;
   reverseResultView: string;
 
   constructor() {
-    if(this.testString !== '') {
+    if (this.testString !== '') {
       this.testString = '';
     }
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmitOne(form: NgForm) {
     console.log(form, form.value);
@@ -32,19 +30,41 @@ export class TestFormComponent implements OnInit {
   }
 
   onSubmitReverseStr(f: NgForm) {
-    console.log(f.value['revStr']);
+    console.log(f.value['revStr'], f.value);
     console.log(this.reverseOne(f.value['revStr']));
-    this.reverseResultView = this.reverseOne(f.value['revStr']);
+
+    const tempChoice: any = f.value.met;
+
+    if (tempChoice === 'one') {
+      this.reverseResultView = this.reverseOne(f.value['revStr']);
+    } else if (tempChoice === 'two') {
+      this.reverseResultView = this.reverseTwo(f.value['revStr']);
+    } else {
+      this.reverseResultView = this.reverseThree(f.value['revStr']);
+    }
+
     this.hasBeenEvaluated = true;
     this.testString = '';
   }
 
   reverseOne(str: string) {
     let resultString: string = '';
-    for(let i = str.length; i >= 0 ; i--) {
-        resultString += str.charAt(i);
+    for (let i = str.length; i >= 0; i--) {
+      resultString += str.charAt(i);
     }
     return resultString;
-}
+  }
+  reverseTwo(str: string) {
+    const arr = str.split('').reverse().join('');
+    return arr;
+  }
 
+  reverseThree(str: string) {
+    let endGame: string = '';
+
+    for (const letter of str) {
+      endGame = letter + endGame;
+    }
+    return endGame;
+  }
 }
