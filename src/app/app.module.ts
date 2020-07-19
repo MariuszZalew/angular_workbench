@@ -48,7 +48,7 @@ const appRoutes: Routes = [
     MainFormComponent,
     DemoFormComponent,
     GroupFormComponent,
-    StringReverseFormComponent,
+    StringReverseFormComponent
   ],
   imports: [BrowserModule,
             FormsModule, 

@@ -9,11 +9,15 @@ import { NgForm } from "@angular/forms";
 
 export class StringReverseFormComponent implements OnInit {
 
-  testString: string;
+  testString: string = 'some text for testing';
   hasBeenEvaluated: boolean = false;
   reverseResultView: string;
 
-  constructor() { }
+  constructor() { 
+    if(this.testString !== '') {
+      this.testString = '';
+    }
+  }
 
   ngOnInit(): void {
   }
