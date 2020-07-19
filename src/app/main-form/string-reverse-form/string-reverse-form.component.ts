@@ -1,32 +1,21 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from "@angular/forms";
 
 @Component({
-  selector: 'app-test-form',
-  templateUrl: './test-form.component.html',
-  styleUrls: [],
+  selector: 'app-string-reverse-form',
+  templateUrl: './string-reverse-form.component.html',
+  styleUrls: []
 })
-export class TestFormComponent implements OnInit {
-  @ViewChild('bar') singUp: NgForm;
 
-  testString: string = 'Please, input any string';
+export class StringReverseFormComponent implements OnInit {
+
+  testString: string;
   hasBeenEvaluated: boolean = false;
   reverseResultView: string;
 
-  constructor() {
-    if (this.testString !== '') {
-      this.testString = '';
-    }
-  }
+  constructor() { }
 
-  ngOnInit(): void {}
-
-  onSubmitOne(form: NgForm) {
-    console.log(form, form.value);
-  }
-
-  onSubmitTwo() {
-    console.log(this.singUp.value);
+  ngOnInit(): void {
   }
 
   onSubmitReverseStr(f: NgForm) {
@@ -45,6 +34,7 @@ export class TestFormComponent implements OnInit {
 
     this.hasBeenEvaluated = true;
     this.testString = '';
+
   }
 
   reverseOne(str: string) {
@@ -53,6 +43,7 @@ export class TestFormComponent implements OnInit {
       resultString += str.charAt(i);
     }
     return resultString;
+
   }
   reverseTwo(str: string) {
     const arr = str.split('').reverse().join('');

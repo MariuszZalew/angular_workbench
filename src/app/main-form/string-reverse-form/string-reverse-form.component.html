@@ -1,0 +1,64 @@
+<div class="ui raised segment">
+  <h2 class="ui header">String Reverse</h2>
+
+  <form
+    class="ui form error success"
+    #reverseStrForm="ngForm"
+    (ngSubmit)="onSubmitReverseStr(reverseStrForm)"
+  >
+    <div class="field">
+      <label>Please, type some text</label>
+      <input
+        type="text"
+        name="revStr"
+        placeholder="Input string"
+        [(ngModel)]="this.testString"
+        required
+        valid
+      />
+    </div>
+
+    <div class="ui form">
+      <div class="inline fields">
+        <label>Which met you want to use?</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="met" value="one" tabindex="0" ngModel required/>
+            <label>First Method</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="met" value="two" tabindex="0" ngModel/>
+            <label>Second Method</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="met" value="three" tabindex="0" ngModel/>
+            <label>Third Method</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>JSON: {{ reverseStrForm.value | json }}</p>
+    <p>Validity: {{ reverseStrForm.valid | json }}</p>
+
+    <p
+      *ngIf="reverseStrForm.value.revStr === '' && !hasBeenEvaluated"
+      class="ui error message"
+    >
+      {{ this.testString || "input field is empty" }}
+    </p>
+    <p *ngIf="hasBeenEvaluated" class="ui error message success">
+      Reversed String: {{ this.reverseResultView }}
+    </p>
+
+    <button class="ui button" type="submit" [disabled]="!reverseStrForm.valid">
+      Submit string
+    </button>
+
+    
+  </form>
+</div>

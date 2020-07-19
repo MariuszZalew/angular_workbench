@@ -16,7 +16,10 @@ import { ExerciseTwoComponent } from './exercise-two/exercise-two.component';
 import { VoteDomainComponent } from './vote-domain/vote-domain.component';
 import { ArticleComponent } from './vote-domain/article/article.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { TestFormComponent } from './test-form/test-form.component';
+import { MainFormComponent } from './main-form/main-form.component';
+import { DemoFormComponent } from './main-form/demo-form/demo-form.component';
+import { GroupFormComponent } from './main-form/group-form/group-form.component';
+import { StringReverseFormComponent } from './main-form/string-reverse-form/string-reverse-form.component';
 
 const appRoutes: Routes = [
   { path: 'Exercise1', component: ExerciseOneComponent },
@@ -24,7 +27,7 @@ const appRoutes: Routes = [
   { path: 'Hello', component: HelloWorldComponent },
   { path: 'Vote', component: VoteDomainComponent },
   { path: 'Products', component: ProductsAllComponent },
-  { path: 'TestForm', component: TestFormComponent }
+  { path: 'TestForm', component: MainFormComponent }
 ];
 
 @NgModule({
@@ -42,7 +45,10 @@ const appRoutes: Routes = [
     VoteDomainComponent,
     ArticleComponent,
     NavMenuComponent,
-    TestFormComponent,
+    MainFormComponent,
+    DemoFormComponent,
+    GroupFormComponent,
+    StringReverseFormComponent,
   ],
   imports: [BrowserModule,
             FormsModule, 

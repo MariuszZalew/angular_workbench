@@ -1,0 +1,20 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form</h2>
+  <form class="ui form" (ngSubmit)="onSubmit(foo)" #foo="ngForm">
+    <div class="field">
+      <label for="anyInput">Any</label>
+      <input
+        type="text"
+        id="anyInput"
+        placeholder="ANY"
+        name="aNy"
+        ngModel
+        required
+        #any="ngModel"
+      />
+    </div>
+    <button type="submit" class="ui button" [disabled]="!any.valid">
+      Submit
+    </button>
+  </form>
+</div>  

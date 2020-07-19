@@ -1,0 +1,36 @@
+<div class="ui raised segment">
+  <h2 class="ui header">ngGroup</h2>
+  <form class="ui form" (ngSubmit)="onSubmit()" #bar="ngForm">
+    <div ngModelGroup="secondForm" #secondForm="ngModelGroup">
+      <div class="field">
+        <label>First Name</label>
+        <input
+          type="text"
+          name="first-name"
+          placeholder="First Name"
+          ngModel
+          required
+        />
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="last-name"
+          placeholder="Last Name"
+          ngModel
+          required
+        />
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" name="checkGroup" ngModel required />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+      <button class="ui button" type="submit" [disabled]="!secondForm.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
