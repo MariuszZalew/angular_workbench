@@ -1,0 +1,52 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Max Characters in a string 29 min Lesson 4</h2>
+
+  <form
+    class="ui form error success"
+    #maxCharForm="ngForm"
+    (submit)="onSubmit(maxCharForm)"
+  >
+    <div class="field">
+      <label>Please, type some text</label>
+      <input
+        type="text"
+        name="maxChar"
+        placeholder="Input string"
+        [(ngModel)]="this.testString"
+        required
+        valid
+      />
+    </div>
+
+    <div class="ui form">
+      <div class="field">
+        <label>Method select</label>
+        <select class="ui fluid dropdown" name="method" ngModel required>
+          <option value="first">First method</option>
+          <option value="second">Second method</option>
+        </select>
+      </div>
+    </div>
+
+    <p>JSON: {{ maxCharForm.value | json }}</p>
+    <p>Validity: {{ maxCharForm.valid | json }}</p>
+
+    <p
+      *ngIf="maxCharForm.value.maxChar === '' || maxCharForm.value.method === ''"
+      class="ui error message"
+    >
+     Please enter some text and select one of the methods
+    </p>
+
+    <p *ngIf="evaluated && maxCharForm.value.maxChar !== ''" class="ui error message success">
+        {{this.solution}}
+    </p>
+
+    <button class="ui button" type="submit" [disabled]="!maxCharForm.valid">
+      Submit string
+    </button>
+
+    
+  </form>
+</div>
+

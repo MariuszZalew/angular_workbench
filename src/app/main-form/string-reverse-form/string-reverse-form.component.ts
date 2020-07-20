@@ -25,8 +25,8 @@ export class StringReverseFormComponent implements OnInit {
   onSubmitReverseStr(f: NgForm) {
     console.log(f.value['revStr'], f.value);
     console.log(this.reverseOne(f.value['revStr']));
-
-    const tempChoice: any = f.value.met;
+  
+    const tempChoice: string = f.value.met;
 
     if (tempChoice === 'one') {
       this.reverseResultView = this.reverseOne(f.value['revStr']);
