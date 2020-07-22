@@ -4,9 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ProductImageComponent } from './products-all/product-image/product-image.component';
-import { ProductDepartmentComponent } from './products-all/product-department/product-department.component';
-import { PriceDisplayComponent } from './products-all/price-display/price-display.component';
 import { ProductRowComponent } from './products-all/product-row/product-row.component';
 import { ProductsListComponent } from './products-all/products-list/products-list.component';
 import { ProductsAllComponent } from './products-all/products-all.component';
@@ -35,9 +32,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ProductImageComponent,
-    ProductDepartmentComponent,
-    PriceDisplayComponent,
     ProductRowComponent,
     ProductsListComponent,
     ProductsAllComponent,
