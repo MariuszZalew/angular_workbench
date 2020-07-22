@@ -21,6 +21,7 @@ import { DemoFormComponent } from './main-form/demo-form/demo-form.component';
 import { GroupFormComponent } from './main-form/group-form/group-form.component';
 import { StringReverseFormComponent } from './main-form/string-reverse-form/string-reverse-form.component';
 import { MaxCharFormComponent } from './main-form/max-char-form/max-char-form.component';
+import { IntReverseFormComponent } from './main-form/int-reverse-form/int-reverse-form.component';
 
 const appRoutes: Routes = [
   { path: 'Exercise1', component: ExerciseOneComponent },
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     DemoFormComponent,
     GroupFormComponent,
     StringReverseFormComponent,
-    MaxCharFormComponent
+    MaxCharFormComponent,
+    IntReverseFormComponent
   ],
   imports: [BrowserModule,
             FormsModule, 

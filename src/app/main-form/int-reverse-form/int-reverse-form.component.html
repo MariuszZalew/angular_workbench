@@ -1,0 +1,40 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Reverse Int</h2>
+
+  <form
+    class="ui form error success"
+    [formGroup]="revIntForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="field" formGroupName='testGroup'>
+      <label>Please input any number</label>
+      <input
+        type="text"
+        formControlName="revInt"
+        placeholder="Input number"
+      />
+    </div>
+
+    <p>JSON: {{ revIntForm.value | json }}</p>
+    <p>Validity: {{ revIntForm.valid | json }}</p>
+
+    <p
+      *ngIf="!revIntForm.get('testGroup.revInt').valid"
+      class="ui error message"
+    >
+    Please enter any valid number and submit.
+    </p>
+
+    <p *ngIf="revIntForm.get('testGroup.revInt').valid && this.solution" class="ui error message success">
+        {{this.solution}}
+    </p>
+
+    <button class="ui button" type="submit" [disabled]="!revIntForm.get('testGroup.revInt').valid">
+      Submit number
+    </button>
+
+    
+  </form>
+</div>
+
+
