@@ -1,6 +1,3 @@
-/**
- * Provides a `product` object
- */
 export class Product {
 
   constructor(

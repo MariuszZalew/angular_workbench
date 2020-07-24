@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from "./product.model";
 
-// MyInventoryApp
-
 @Component({
   selector: 'app-products-all',
   templateUrl: './products-all.component.html',

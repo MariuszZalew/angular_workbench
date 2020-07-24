@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-int-reverse-form',
@@ -10,7 +10,7 @@ export class IntReverseFormComponent implements OnInit {
   solution: any;
   revIntForm: FormGroup;
 
-  constructor() {}
+  constructor() {};
 
   ngOnInit(): void {
     this.revIntForm = new FormGroup({
