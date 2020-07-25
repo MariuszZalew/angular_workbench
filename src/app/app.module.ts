@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { ProductRowComponent } from './products-all/product-row/product-row.component';
@@ -16,11 +17,13 @@ import { GroupFormComponent } from './main-form/group-form/group-form.component'
 import { StringReverseFormComponent } from './main-form/string-reverse-form/string-reverse-form.component';
 import { MaxCharFormComponent } from './main-form/max-char-form/max-char-form.component';
 import { IntReverseFormComponent } from './main-form/int-reverse-form/int-reverse-form.component';
+import { StarWarsComponent } from './star-wars/star-wars.component';
 
 const appRoutes: Routes = [
   { path: 'Vote', component: VoteDomainComponent },
   { path: 'Products', component: ProductsAllComponent },
-  { path: 'TestForm', component: MainFormComponent }
+  { path: 'TestForm', component: MainFormComponent },
+  { path: 'StarWars', component: StarWarsComponent }
 ];
 
 @NgModule({
@@ -37,12 +40,16 @@ const appRoutes: Routes = [
     GroupFormComponent,
     StringReverseFormComponent,
     MaxCharFormComponent,
-    IntReverseFormComponent
+    IntReverseFormComponent,
+    StarWarsComponent,
   ],
-  imports: [BrowserModule,
-            FormsModule, 
-            ReactiveFormsModule,
-            RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

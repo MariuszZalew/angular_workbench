@@ -10,7 +10,7 @@ import { ProductsService } from './products.service';
 export class ProductsAllComponent implements OnInit {
   products: Product[];
 
-  constructor( private ps: ProductsService) {}
+  constructor( private ps: ProductsService ) {}
   
   ngOnInit(): void {
     this.products = this.ps.products;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import * as faker from "ng-faker";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "Angular Hello"
   allowButton = false;
+
+  // mememe = faker.fake("{{name.prefix}}");
+  // m2 = faker.name.fullName();
+
 
   ownComponentPerson: string[] = ["Jan","Krzysztof","Alicja"];
   
