@@ -18,6 +18,7 @@ import { StringReverseFormComponent } from './main-form/string-reverse-form/stri
 import { MaxCharFormComponent } from './main-form/max-char-form/max-char-form.component';
 import { IntReverseFormComponent } from './main-form/int-reverse-form/int-reverse-form.component';
 import { StarWarsComponent } from './star-wars/star-wars.component';
+import { JediComponent } from './star-wars/jedi/jedi.component';
 
 const appRoutes: Routes = [
   { path: 'Vote', component: VoteDomainComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     MaxCharFormComponent,
     IntReverseFormComponent,
     StarWarsComponent,
+    JediComponent,
   ],
   imports: [
     BrowserModule,

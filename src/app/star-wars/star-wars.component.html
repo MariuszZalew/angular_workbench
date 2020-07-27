@@ -1,2 +1,6 @@
 <p>star-wars works!</p>
-<p>{{ characters | json}}</p>
+<!-- <p>{{ characters | json}}</p> -->
+
+<p *ngFor="let item of characters;let i = index"> {{ item.name }} is {{ item.height }} cm </p>
+
+<app-jedi [jedi]="true" (knight)="getValueFromChild($event)"></app-jedi>

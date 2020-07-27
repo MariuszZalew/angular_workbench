@@ -17,8 +17,11 @@ export class StarWarsComponent implements OnInit {
     this.getChars().subscribe( chars => this.characters = chars );
   }
 
-  
    getChars() {
      return this.http.get(this.base_url);
    } 
+
+   getValueFromChild(e: any) {
+     console.log("Parrent have recived value of ", e);
+   }
 }
