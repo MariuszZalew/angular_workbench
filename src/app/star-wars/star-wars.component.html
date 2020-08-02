@@ -1,6 +1,33 @@
 <p>star-wars works!</p>
 <!-- <p>{{ characters | json}}</p> -->
 
-<p *ngFor="let item of characters;let i = index"> {{ item.name }} is {{ item.height }} cm </p>
+<!-- <p *ngFor="let item of characters;let i = index"> {{ item.name }} is {{ item.height }} cm </p> -->
+
+<table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Hair</th>
+        <th>Skin</th>
+        <th>Eye</th>
+        <th>Birth</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let char of characters;let i = index">
+        <td data-label="Name" (click)="delMe($event)">{{ char.name }}</td>
+        <td data-label="Height">{{ char.height }}</td>
+        <td data-label="Hair">{{ char.mass }}</td>
+        <td data-label=""> {{ char.hair_color }}</td>
+        <td>{{ char.skin_color }}</td>
+        <td data-label=""> {{ char.eye_color }}</td>
+        <td data-label="">{{ char.birth_year }}</td>
+        <td data-label="">{{ char.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
 
 <app-jedi [jedi]="true" (knight)="getValueFromChild($event)"></app-jedi>

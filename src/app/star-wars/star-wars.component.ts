@@ -10,6 +10,7 @@ export class StarWarsComponent implements OnInit {
 
   base_url: string = 'http://localhost:3000/profile';
   characters: any; 
+  arr = [1,2,3,4,5];
 
   constructor( private http: HttpClient ) { }
 
@@ -23,5 +24,9 @@ export class StarWarsComponent implements OnInit {
 
    getValueFromChild(e: any) {
      console.log("Parrent have recived value of ", e);
+   }
+
+   delMe(e: any) {
+     console.log(e.target);
    }
 }
