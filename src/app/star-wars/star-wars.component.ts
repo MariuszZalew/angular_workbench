@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core'; import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-star-wars',
@@ -27,6 +26,7 @@ export class StarWarsComponent implements OnInit {
    }
 
    delMe(e: any) {
-     console.log(e.target);
+     console.log(e.target,e.target.innerText === this.characters[0].name);
+     this.characters = this.characters.filter( char => char.name !== e.target.innerText);
    }
 }
